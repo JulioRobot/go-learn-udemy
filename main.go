@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	calculate()
+	//calculate()
+	invesmentRevenue()
 }
 
 func invesmentRevenue() {
@@ -33,6 +34,15 @@ func invesmentRevenue() {
 	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
 	futureRealValue := futureValue / math.Pow(1+inflationRate/100, years)
 
-	fmt.Println(futureValue)
-	fmt.Println(futureRealValue)
+	formattedFV := fmt.Sprintf("Future Value: %.0f\n", futureValue)
+	formattedRFV := fmt.Sprintf("Future Value (adjusted for inflation): %.1f", futureRealValue)
+	//fmt.Println(futureValue)
+	//fmt.Println("Future Value: ", futureValue)
+	//fmt.Printf("Future Value: %.0f\nFuture Value (adjusted for inflation): %.1f", futureValue, futureRealValue)
+	//fmt.Printf(`Future Value: %.0f\n
+	//Future Value (adjusted for inflation): %.1f`, futureValue, futureRealValue)
+
+	//fmt.Println("Future Value (adjusted for inflation): ", futureRealValue)
+	fmt.Print(formattedFV, formattedRFV)
+
 }

@@ -22,7 +22,7 @@ func calculate() {
 	println("EBT")
 	println(ebt)
 
-	profit := revenue - expanses - taxRate
+	profit := ebt * (1 - taxRate/100)
 	println("Profit")
 	println(profit)
 
